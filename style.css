@@ -1,0 +1,108 @@
+:root{
+    --text-color:rgb(95, 86, 86);
+}
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.container{
+    width: 100%;
+    max-width: 739px;
+    position: relative;
+    margin: 100px auto;
+    background-color:#fff;
+}
+.container-apps{
+   display: flex;
+   flex-direction: column;
+   border: 2px solid #d14f1c;
+}
+.container-apps h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(22, 119, 22);
+    margin: 10px 0;
+}
+.container-times{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid rgb(16, 238, 201);
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+}
+.container-times__css{
+    position: relative;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.times-clock{
+    font-size: 2.5rem;
+    color: rgb(255, 0, 255);
+}
+.times-tuall{
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+.container-form{
+    text-align: center;
+}
+
+
+
+
+.value-sum{
+    width: 100%;
+    max-width: 55px;
+    height: 30px;
+    outline: none;
+    font-size: 1.2rem;
+    border: 1px solid rgba(92, 86, 86, 0.849);
+}
+.sum{
+    font-size: 1.2rem;
+}
+.sum-value{
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+.check-sum{
+    margin-top: 10px;
+    width: 230px;
+    padding: 8px 0;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: rgb(6, 173, 6);
+    color: rgba(255, 255, 255, 0.822);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.check-sum:hover{
+    background-color: palevioletred;
+}
+.notication{
+    text-align: center;
+    font-size: 1.2rem;
+    color: green;
+}
+.start-Game{
+    text-align: center;
+    padding: 10px 0;
+}
+.start-Game__button{
+    height: 35px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(6, 173, 6);
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.start-Game__button:hover{
+    background-color: palevioletred;
+}
