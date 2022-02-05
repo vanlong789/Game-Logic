@@ -8,7 +8,7 @@ const sum = document.querySelector('.sum-value');
 let y = 1;
 start.onclick = function(){
    if(y == 1){
-        test(60);
+        test(15);
         ramdom();
         y++;
    }else{
@@ -30,6 +30,7 @@ function test(x){
     
     function returnTime(value){
         times.innerHTML = `${value}s`;
+        times.setAttribute('data',`${value}`);
     }
 }
 // xử lý giá trị
@@ -47,20 +48,22 @@ function checkValue(inputs){
 
 const myArray = [];
 function ramdom(){
-    let a = Math.round(Math.random()*5);
-    let b = Math.round(Math.random()*5);
-    let c = Math.round(Math.random()*5);
-    let d = Math.round(Math.random()*5);
-    
+    let a = Math.round(Math.random()*9);
+    let b = Math.round(Math.random()*9);
+    let c = Math.round(Math.random()*9);
+    let d = Math.round(Math.random()*9);
+    let e = Math.round(Math.random()*9);
+    let sum = a + b + c + d + e;
     let valueArray = {
-        a:a,b:b,c:c,d:d
+       sum:sum
     }
     myArray.push(valueArray);
-    console.log(myArray)
 
-    value_sum[0].value = myArray[0].a;
-    value_sum[2].value = myArray[0].c;
-    sum.innerHTML = a + b + c + d;
+    value_sum[0].value = a;
+    value_sum[1].value = b;
+    value_sum[2].value = c;
+    value_sum[3].value = d;
+    value_sum[4].value = e;
 }
 
 
@@ -72,16 +75,19 @@ function ramdom(){
 submit.onclick = function(e){
     e.preventDefault();
     if(!checkValue(value_sum)){
-        let m = Number(value_sum[0].value.trim());
-        let n = Number(value_sum[1].value.trim());
-        let p = Number(value_sum[2].value.trim());
-        let q = Number(value_sum[3].value.trim());
-        if(m === myArray[0].a && n === myArray[0].b && p === myArray[0].c && q === myArray[0].d){
-            notication.innerHTML = 'Đáp án chính xác';
-            notication.style.color = 'green';
-        }else{
-            notication.innerHTML = 'Đáp án chưa chính xác';
+        let m = Number(value_sum[5].value.trim());
+        let getTime = Number(times.getAttribute("data"));
+        if(getTime === 0){
+            notication.innerHTML = 'Đã hết thời gian';
             notication.style.color = 'red';
+        }else{
+            if(m === myArray[0].sum){
+                notication.innerHTML = 'Đáp án chính xác';
+                notication.style.color = 'green';
+            }else{
+                notication.innerHTML = 'Đáp án chưa chính xác';
+                notication.style.color = 'red';
+            }
         }
     }
 }
