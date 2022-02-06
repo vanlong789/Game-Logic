@@ -48,11 +48,11 @@ function checkValue(inputs){
 
 const myArray = [];
 function ramdom(){
-    let a = Math.round(Math.random()*9);
-    let b = Math.round(Math.random()*9);
-    let c = Math.round(Math.random()*9);
-    let d = Math.round(Math.random()*9);
-    let e = Math.round(Math.random()*9);
+    let a = Math.round(Math.random()*20);
+    let b = Math.round(Math.random()*20);
+    let c = Math.round(Math.random()*20);
+    let d = Math.round(Math.random()*20);
+    let e = Math.round(Math.random()*20);
     let sum = a + b + c + d + e;
     let valueArray = {
        sum:sum
